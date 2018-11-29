@@ -7,6 +7,7 @@
       </div>
       <el-button type="primary" @click="goArt">文章</el-button>
       <p v-for="(item, index) in users" :key="index">{{item.name}}</p>
+      <el-button type="primary" @click="goIndex">可以前往index页面了</el-button>
     </div>
   </div>
 </template>
@@ -25,6 +26,9 @@ export default {
   methods: {
     goArt () {
       this.$router.push('/art')
+    },
+    goIndex () {
+      this.$router.push('/index')
     },
     init () {
       getAllUser({}).then(res => {

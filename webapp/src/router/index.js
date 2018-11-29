@@ -10,7 +10,7 @@ export default new Router({
     {
       path: '/',
       redirect: `/home`,
-      name: 'index',
+      name: 'one',
       component: () => import('@/pages/home/home')
     },
     {
@@ -22,6 +22,11 @@ export default new Router({
       path: '/art',
       name: 'art',
       component: () => import('@/pages/article/article')
+    },
+    {
+      path: '/index',
+      name: 'index',
+      component: () => import('@/pages/index/index')
     }
   ]
 })
