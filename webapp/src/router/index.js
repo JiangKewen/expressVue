@@ -27,6 +27,19 @@ export default new Router({
       path: '/index',
       name: 'index',
       component: () => import('@/pages/index/index')
+    },
+    {
+      path: '/npm',
+      name: 'npm',
+      redirect: '/npm/curve',
+      component: () => import('@/pages/fromnpm/curve'),
+      children: [
+        {
+          path: 'curve',
+          name: 'curve',
+          component: () => import('@/pages/fromnpm/curve')
+        }
+      ]
     }
   ]
 })

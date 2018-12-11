@@ -4,10 +4,11 @@
     <div class="homeBody">
       <div>
         <i class="el-icon-edit"></i>
-      </div>
-      <el-button type="primary" @click="goArt">文章</el-button>
-      <p v-for="(item, index) in users" :key="index">{{item.name}}</p>
-      <el-button type="primary" @click="goIndex">可以前往index页面了</el-button>
+      </div><br>
+      <el-button type="primary" @click="goArt">文章</el-button><br><br>
+      <p v-for="(item, index) in users" :key="index">{{item.name}}</p><br>
+      <el-button type="primary" @click="goIndex">可以前往index页面了</el-button><br><br>
+      <el-button type="primary" @click="goCurvejs">curvejs</el-button>
     </div>
   </div>
 </template>
@@ -29,6 +30,10 @@ export default {
     },
     goIndex () {
       this.$router.push('/index')
+    },
+    // curvejs 动态canvas文字
+    goCurvejs () {
+      this.$router.push('/npm/curve')
     },
     init () {
       getAllUser({}).then(res => {
